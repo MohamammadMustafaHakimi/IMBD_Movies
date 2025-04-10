@@ -174,6 +174,7 @@ ggplot(number_of_movies_each_year, aes(x=startYear, y=count)) +
   facet_wrap(~genres, scales='free_y')
 ```
 **Explanation**: Shows how many movies were made each year by genre, with individual scales.
+
 9. Bayesian Rating Analysis
 ```r
 C <- mean(horror_movies$rating, na.rm = TRUE)
@@ -182,6 +183,7 @@ horror_movies <- horror_movies %>%
   mutate(adjusted_rating = (C * m + horror_movies$averageRating * horror_movies$numVotes) / (horror_movies$numVotes + m))
 ```
 **Explanation**: Applies Bayesian average rating to give more reliable scores, especially for movies with few votes.
+
 10. Genre and Average Rating Correlation
 ```r
 grouped_by_genre$runtimeMinutes <- as.numeric(as.character(grouped_by_genre$runtimeMinutes))

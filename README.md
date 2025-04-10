@@ -159,14 +159,6 @@ ggplot(genre_data_scaled, aes(x = startYear, y = ScaledValue, color = Factor, li
 ```
 **Explanation**: Visualizes the relationship between rating and movie length over time by genre.
 
-8.6 Number of Movies Released Per Year
-```r
-ggplot(number_of_movies_per_year, aes(x=startYear, y=count)) +
-  geom_line() +
-  facet_wrap(~)
-```
-**Explanation**: (Seems incomplete) Meant to show number of movies released per year; likely missing a grouping variable in `facet_wrap`.
-
 8.7 Number of Movies by Genre
 ```r
 ggplot(number_of_movies_each_year, aes(x=startYear, y=count)) +
